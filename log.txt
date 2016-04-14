@@ -1,0 +1,9 @@
+3.3
+--------------------------
+make change on UI
+3.2
+--------------------------
+make previous button usable and implment display different sentence according to the user's usertype
+3.1
+--------------------------
+make the skip button in the record page usable.

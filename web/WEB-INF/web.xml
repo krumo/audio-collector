@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>serv.LoginServ</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/Login.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>register</servlet-name>
+        <servlet-class>serv.RegisterServ</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>register</servlet-name>
+        <url-pattern>/Register.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>personSet</servlet-name>
+        <servlet-class>serv.PerSetServ</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>personSet</servlet-name>
+        <url-pattern>/Person.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>record</servlet-name>
+        <servlet-class>serv.RecServ</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>record</servlet-name>
+        <url-pattern>/Record.do</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <display-name>Loginfilter</display-name>
+        <filter-name>Loginfilter</filter-name>
+        <filter-class>filter.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Loginfilter</filter-name>
+        <url-pattern>/page/record.jsp</url-pattern>
+        <url-pattern>/page/personalSetting.jsp</url-pattern>
+    </filter-mapping>
+</web-app>
