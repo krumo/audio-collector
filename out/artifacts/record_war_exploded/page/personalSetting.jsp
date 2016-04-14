@@ -14,17 +14,6 @@
     <link rel="stylesheet" href="../Wopop_files/css/main.css">
     <link rel="stylesheet" href="../Wopop_files/css/register.css">
 </head>
-<!--body>
-<a href="/page/record.jsp">返回录音</a>
-<form action="/Person.do" method="post">
-    用户名:<input type="text" name="username" required/><br/>
-    密码:<input type="password" name="password" required/><br/>
-    性别:<input type="text" name="gender" required/><br>
-    年龄:<input type="text" name="age" required/><br>
-    出生所在地:<input type="text" name="birthPlace" required/><br>
-    <input type="submit" value="更新" />
-</form>
-</body-->
 <body class="login">
 <div class="myContainer">
     <!--导航条-->
@@ -54,27 +43,12 @@
             <!--<a href="/page/record.jsp">返回录音</a>-->
 
             <form action="../Person.do" method="post">
-                <!--div class="form-group">
-                    <input type="text" name="username" class="form-control" placeholder="用户名"required />
-                </div>
-                <div class="form-group">
-                    <input type="password" name="username" class="form-control" placeholder="密码"required />
-                </div>
-                <div class="form-group">
-                    <input type="text" name="gender" class="form-control" placeholder="性别"required />
-                </div>
-                <div class="form-group">
-                    <input type="text" name="age" class="form-control" placeholder="年龄"required />
-                </div>
-                <div class="form-group">
-                    <input type="text" name="birthplace" class="form-control" placeholder="籍贯"required />
-                </div-->
                 <div class="form-group">
                     <input type="text" name="username" class="form-control" placeholder="请输入用户名（必须以字母开头）"required />
                 </div>
 
                 <div class="form-group">
-                    <input type="password" name="password" class="form-control" placeholder="请输入密码（不超过六位）" />
+                    <input type="password" name="password" class="form-control" placeholder="请输入密码（不超过六位）" required/>
                 </div>
 
                 <div class="form-group select_list">

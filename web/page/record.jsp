@@ -62,15 +62,9 @@
 
         <div class="btn_group">
             <button id="previouss" onclick="loadprevXMLDoc(this);" class="btn btn-info" title="上一条"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>&nbsp;上一条</button>
-
             <button id="skip"onclick="loadskipXMLDoc(this);" class="btn btn-info" title="显示文本"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;显示文本</button>
-
             <button id="nexts" onclick="uploadandnext(this);" class="btn btn-info" title="下一条"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>&nbsp;下一条</button>
-
             <button id="beginrec" onclick="recordaudio(this);" class="btn btn-info" title="开始录音"><span class="glyphicon glyphicon-play" aria-hidden="true"></span>&nbsp;开始</button>
-
-            <!--button id="beginrec" onclick="startRecording(this);" class="btn btn-info" title="开始录音"><span class="glyphicon glyphicon-play" aria-hidden="true"></span>&nbsp;开始</button>
-            <button id="stoprec" onclick="stopRecording(this);" class="btn btn-info"  title="停止录音"><span class="glyphicon glyphicon-stop" aria-hidden="true"></span>&nbsp;停止</button-->
         </div>
 
         <div class="record_list">
@@ -267,8 +261,6 @@
         recorder && recorder.record();
         beginrec.disabled=true;
         stoprec.disabled=false;
-        //button.disabled = true;
-        //button.nextElementSibling.disabled = false;
         __log('Recording...');
     }
 
@@ -276,8 +268,6 @@
         recorder && recorder.stop();
         stoprec.disabled=true;
         beginrec.disabled=false;
-        //button.disabled = true;
-        //button.previousElementSibling.disabled = false;
         __log('Stopped recording.');
         // create WAV download link using audio data blob
         createDownloadLink();
@@ -307,12 +297,8 @@
          var url = URL.createObjectURL(blob);
          var li = document.createElement('li');
          var au = document.createElement('audio');
-         //var hf = document.createElement('a');
          au.controls = true;
          au.src = url;
-         //hf.href = url;
-         //hf.download = new Date().toISOString() + '.wav';
-         //hf.innerHTML = hf.download;
          li.appendChild(au);
             var reclist=document.getElementById('recordingslist');
             reclist.appendChild(li);

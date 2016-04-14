@@ -230,7 +230,9 @@ public class textimpl {
             if(textID>0)
                 sql+=" and textID >"+textID;
 
-            System.out.println(sql);
+
+        sql+=" limit 5";
+        System.out.println(sql);
             try {
                 pst=conn.prepareStatement(sql);
                 rs=pst.executeQuery();

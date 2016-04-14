@@ -97,13 +97,9 @@ public class RecServ extends HttpServlet {
             }
             urimpl.updateuserlasttext(ur);
         } else if (status.equals("next")) {
-            //if(initial)
-            {
+
                 readnextsentences(uid, lasttext, type);
-                initial = false;
-            }
-            //else
-            {
+
                 response.setContentType("text/html");
                 PrintWriter out = response.getWriter();
                 if (back)
@@ -116,7 +112,6 @@ public class RecServ extends HttpServlet {
                 out.println("<h2>" + txts.get(curmark++).getSentence() + "<h2>");
                 out.flush();
                 out.close();
-            }
 
         } else if (status.equals("previous")) {
             readprevioussentences(uid, lasttext, type);
